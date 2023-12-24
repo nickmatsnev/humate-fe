@@ -35,7 +35,7 @@ function Copyright(props: any) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://sifox.com/">
-      Sifox
+        Sifox
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -108,12 +108,12 @@ export default function Dashboard() {
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
-          <Toolbar                        
+          <Toolbar
             sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                px: [3],
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              px: [3],
             }}
           >
             <IconButton
@@ -154,39 +154,51 @@ export default function Dashboard() {
             }}
           >
             <Typography variant="h6" noWrap component="div">
-                Some logo
+              Some logo
             </Typography>
             <IconButton onClick={toggleDrawer}>
-                <ChevronLeftIcon />
+              <ChevronLeftIcon />
             </IconButton>
           </Toolbar>
-          <List component="nav"> 
+          <List component="nav">
             <ListItemButton>
-            <ListItemIcon>
+              <ListItemIcon>
                 <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Chat settings" onClick={() => router.push('/auth/login')} />
+              </ListItemIcon>
+              <ListItemText
+                primary="Chat settings"
+                onClick={() => router.push("/auth/login")}
+              />
             </ListItemButton>
             <ListItemButton>
-            <ListItemIcon>
+              <ListItemIcon>
                 <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Chat sandbox" onClick={() => router.push('/auth/login')} />
+              </ListItemIcon>
+              <ListItemText
+                primary="Chat sandbox"
+                onClick={() => router.push("/auth/login")}
+              />
             </ListItemButton>
             <ListItemButton>
-            <ListItemIcon>
+              <ListItemIcon>
                 <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Results" onClick={() => router.push('/auth/login')} />
+              </ListItemIcon>
+              <ListItemText
+                primary="Results"
+                onClick={() => router.push("/auth/login")}
+              />
             </ListItemButton>
           </List>
           <Divider />
-          <List component="nav"> 
+          <List component="nav">
             <ListItemButton>
-            <ListItemIcon>
+              <ListItemIcon>
                 <PeopleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Login page" onClick={() => router.push('/auth/login')} />
+              </ListItemIcon>
+              <ListItemText
+                primary="Login page"
+                onClick={() => router.push("/auth/login")}
+              />
             </ListItemButton>
           </List>
         </Drawer>

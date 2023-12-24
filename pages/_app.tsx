@@ -12,24 +12,24 @@ function App({ Component, pageProps }: AppProps<{}>) {
   const queryClient = new QueryClient();
   const { language } = AppSettings.get();
 
-//   useEffect(() => {
-//     if (language) {
-//       document.documentElement.setAttribute("lang", language);
-//       const langFromPath = getLanguageFromPath();
-//       const shouldReroute = langFromPath
-//         ? // Reroute if language in URL is different from user saved.
-//           langFromPath !== language
-//         : // Don't reroute however, if the language is English and we are on the "/" route.
-//           language !== "en";
-//       if (shouldReroute) {
-//         const currentPathWithoutLang = window.location.pathname.replace(
-//           `/${langFromPath}`,
-//           "",
-//         );
-//         window.location.href = `/${language}${currentPathWithoutLang}`;
-//       }
-//     }
-//   }, [language]);
+  //   useEffect(() => {
+  //     if (language) {
+  //       document.documentElement.setAttribute("lang", language);
+  //       const langFromPath = getLanguageFromPath();
+  //       const shouldReroute = langFromPath
+  //         ? // Reroute if language in URL is different from user saved.
+  //           langFromPath !== language
+  //         : // Don't reroute however, if the language is English and we are on the "/" route.
+  //           language !== "en";
+  //       if (shouldReroute) {
+  //         const currentPathWithoutLang = window.location.pathname.replace(
+  //           `/${langFromPath}`,
+  //           "",
+  //         );
+  //         window.location.href = `/${language}${currentPathWithoutLang}`;
+  //       }
+  //     }
+  //   }, [language]);
 
   return (
     <SessionProvider>
