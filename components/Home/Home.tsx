@@ -19,7 +19,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import PeopleIcon from "@mui/icons-material/People";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  Avatar,
+  ListItem,
+  ListItemAvatar,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import Dashboard from "../Dashboard/Dashboard";
 import Chat from "../Chat/Chat";
 import { SettingDialog } from "../Settings/Settings";
@@ -218,6 +225,15 @@ function Home() {
                 onClick={() => router.push("/auth/login")}
               />
             </ListItemButton>
+          </List>
+          <Divider />
+          <List style={{ marginTop: "auto" }}>
+            <ListItem>
+              <ListItemAvatar>
+                <Avatar sx={{ bgcolor: "blue", color: "white" }}>U</Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="User Name" secondary="user@email.com" />
+            </ListItem>
           </List>
         </Drawer>
         <Box

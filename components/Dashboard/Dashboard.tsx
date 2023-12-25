@@ -22,7 +22,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
-import Orders from "./Orders";
+import Interviews from "./Interviews";
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 
 function Copyright(props: any) {
@@ -132,10 +132,10 @@ export default function Dashboard() {
             <Deposits />
           </Paper>
         </Grid>
-        {/* Recent Orders */}
+        {/* Recent Interviews */}
         <Grid item xs={12}>
           <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-            <Orders />
+            <Interviews />
           </Paper>
         </Grid>
       </Grid>
