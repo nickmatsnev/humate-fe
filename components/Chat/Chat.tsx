@@ -30,13 +30,13 @@ const Chat: React.FC = () => {
   return (
     <ChatSection>
       <Typography variant="h5" sx={{ padding: 2, fontWeight: "bold" }}>
-        Chat
+        HR Bot
       </Typography>
       <MessageArea>
         <ListItem key="1">
           <Grid container>
             <Grid item xs={12}>
-              <ListItemText align="right" primary="Hey man, What's up ?" />
+              <ListItemText align="right" primary="/start" />
             </Grid>
             <Grid item xs={12}>
               <ListItemText align="right" secondary="09:30" />
@@ -46,10 +46,7 @@ const Chat: React.FC = () => {
         <ListItem key="2">
           <Grid container>
             <Grid item xs={12}>
-              <ListItemText
-                align="left"
-                primary="Hey, Iam Good! What about you ?"
-              />
+              <ListItemText align="left" primary="Hey, Nick! What is love ?" />
             </Grid>
             <Grid item xs={12}>
               <ListItemText align="left" secondary="09:31" />
@@ -61,7 +58,7 @@ const Chat: React.FC = () => {
             <Grid item xs={12}>
               <ListItemText
                 align="right"
-                primary="Cool. i am good, let's catch up!"
+                primary="Baby don't hurt me, don't hurt me no more!"
               />
             </Grid>
             <Grid item xs={12}>
