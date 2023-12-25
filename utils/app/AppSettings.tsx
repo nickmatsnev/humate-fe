@@ -1,4 +1,4 @@
-export const LANGUAGES = ["en", "de"];
+export const LANGUAGES = ["en", "de", "ru"];
 const STORAGE_KEY = "settings";
 
 let instance: AppSettings | undefined = undefined;
