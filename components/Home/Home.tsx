@@ -23,6 +23,7 @@ import PlusOneIcon from "@mui/icons-material/PlusOne";
 import ViewAgendaRoundedIcon from "@mui/icons-material/ViewAgendaRounded";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ChatIcon from "@mui/icons-material/Chat";
+import ListIcon from "@mui/icons-material/List";
 import {
   Avatar,
   ListItemAvatar,
@@ -36,6 +37,7 @@ import { SettingDialog } from "../Settings/Settings";
 import ViewJob from "../Job/viewJob";
 import CreateJob from "../Job/createJob";
 import Landing from "../Landing/Landing";
+import Jobs from "../Job/Jobs";
 
 function Copyright(props: any) {
   return (
@@ -135,7 +137,8 @@ function Home() {
         );
       case "landing":
         return <Landing />;
-      // add Jobs,
+      case "jobs":
+        return <Jobs />;
       default:
         return <Landing />;
     }
@@ -251,7 +254,13 @@ function Home() {
               <ListItemIcon>
                 <ViewAgendaRoundedIcon />
               </ListItemIcon>
-              <ListItemText primary="View Job Position" />
+              <ListItemText primary="View Job Position  " />
+            </ListItemButton>
+            <ListItemButton onClick={() => setSelectedComponent("jobs")}>
+              <ListItemIcon>
+                <ListIcon />
+              </ListItemIcon>
+              <ListItemText primary="View Jobs" />
             </ListItemButton>
             <ListItemButton onClick={() => setSelectedComponent("landing")}>
               <ListItemIcon>

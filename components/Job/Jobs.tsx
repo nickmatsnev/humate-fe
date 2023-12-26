@@ -26,9 +26,9 @@ function createData(
   name: string,
   place: string,
   jobPosition: string,
-  score: string,
+  description: string,
 ) {
-  return { id, date, name, place, jobPosition, score };
+  return { id, date, name, place, jobPosition, description };
 }
 
 const rows = [
@@ -38,7 +38,7 @@ const rows = [
     "Elvis Presley",
     "Tupelo, MS",
     "Musiker",
-    "7/10",
+    "Description",
   ),
   createData(
     1,
@@ -46,7 +46,7 @@ const rows = [
     "Paul McCartney",
     "London, UK",
     "Dishwasher",
-    "4/10",
+    "Description",
   ),
   createData(
     2,
@@ -54,7 +54,7 @@ const rows = [
     "Tom Scholz",
     "Boston, MA",
     "Datenschutz Arbeiter",
-    "8/10",
+    "Description",
   ),
   createData(
     3,
@@ -62,7 +62,7 @@ const rows = [
     "Michael Jackson",
     "Gary, IN",
     "Pracovnik kadernictvi",
-    "2/10",
+    "Description",
   ),
   createData(
     4,
@@ -70,7 +70,7 @@ const rows = [
     "Bruce Springsteen",
     "Long Branch, NJ",
     "Software Engineer",
-    "3/10",
+    "Description",
   ),
 ];
 
@@ -78,7 +78,7 @@ function preventDefault(event: React.MouseEvent) {
   event.preventDefault();
 }
 
-export default function Interviews() {
+export default function Jobs() {
   return (
     <React.Fragment>
       <Title>Declared positions</Title>
@@ -89,7 +89,7 @@ export default function Interviews() {
             <TableCell>Name</TableCell>
             <TableCell>Place</TableCell>
             <TableCell>Job Position</TableCell>
-            <TableCell>Score</TableCell>
+            <TableCell>Description</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -99,7 +99,7 @@ export default function Interviews() {
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.place}</TableCell>
               <TableCell>{row.jobPosition}</TableCell>
-              <TableCell>{row.score}</TableCell>
+              <TableCell>{row.description}</TableCell>
             </TableRow>
           ))}
         </TableBody>
