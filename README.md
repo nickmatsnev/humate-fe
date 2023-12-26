@@ -34,20 +34,53 @@ Tests to be added. CI/CD to be added.
 
 ## User Guide
 
-PC:
-![Alt text](public/images/mainFrame.png)
+### PC:
 
-![Alt text](public/images/chatFrame.png)
 
-![Alt text](public/images/settingsFrame.png)
+1. Main Page 
+![MainPage](public/images/mainFrame.png)
 
-![Alt text](public/images/loginFrame.png)
 
-Mobile:
-![image](https://github.com/nickmatsnev/humate-fe/assets/36966491/f67723b7-792e-4856-8b98-c41367bea9e8)
+2. Settings (pops up on every page except for auth pages)
+![Settings](public/images/settings.png)
 
-![image](https://github.com/nickmatsnev/humate-fe/assets/36966491/00e8683c-e4bd-4269-abc8-b67362b644c5)
 
-![image](https://github.com/nickmatsnev/humate-fe/assets/36966491/dd24178d-ea75-407e-8f44-9865d519a340)
+3. Chat 
+![Alt text](public/images/chat.png)
 
-![image](https://github.com/nickmatsnev/humate-fe/assets/36966491/638ebfa8-fe88-4f0f-acec-4cbe64747995)
+
+4. Admin view table 
+![Alt text](public/images/results.png)
+
+
+5. Create Job
+![Alt text](public/images/crjob.png)
+
+6. View Job
+![Alt text](public/images/viewjob.png)
+
+7. View Jobs
+![Alt text](public/images/jobs.png)
+
+8. Login
+![Alt text](public/images/login.png)
+
+
+
+### Mobile
+
+
+1. Main Page 
+![Alt text](public/images/mobile/main.png)
+2. Chat
+![Alt text](public/images/mobile/chat.png) 
+3. Admin view table
+![Alt text](public/images/mobile/results.png)
+4. Create Job
+![Alt text](public/images/mobile/crjob.png)
+5. View Job
+![Alt text](public/images/mobile/viewjob.png)
+6. View Jobs
+![Alt text](public/images/mobile/jobs.png)
+7. Login
+![Alt text](public/images/mobile/login.png)

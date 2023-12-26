@@ -6,6 +6,9 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 interface TitleProps {
   children?: React.ReactNode;
@@ -32,46 +35,11 @@ function createData(
 }
 
 const rows = [
-  createData(
-    0,
-    "16 Mar, 2019",
-    "Elvis Presley",
-    "Tupelo, MS",
-    "Musiker",
-    "Description",
-  ),
-  createData(
-    1,
-    "16 Mar, 2019",
-    "Paul McCartney",
-    "London, UK",
-    "Dishwasher",
-    "Description",
-  ),
-  createData(
-    2,
-    "16 Mar, 2019",
-    "Tom Scholz",
-    "Boston, MA",
-    "Datenschutz Arbeiter",
-    "Description",
-  ),
-  createData(
-    3,
-    "16 Mar, 2019",
-    "Michael Jackson",
-    "Gary, IN",
-    "Pracovnik kadernictvi",
-    "Description",
-  ),
-  createData(
-    4,
-    "15 Mar, 2019",
-    "Bruce Springsteen",
-    "Long Branch, NJ",
-    "Software Engineer",
-    "Description",
-  ),
+  createData(0, "16 Mar, 2019", "Elvis Presley", "Tupelo, MS", "Musiker", "Description"),
+  createData(1, "16 Mar, 2019", "Paul McCartney", "London, UK", "Dishwasher", "Description"),
+  createData(2, "16 Mar, 2019", "Tom Scholz", "Boston, MA", "Datenschutz Arbeiter", "Description"),
+  createData(3, "16 Mar, 2019", "Michael Jackson", "Gary, IN", "Pracovnik kadernictvi", "Description"),
+  createData(4, "15 Mar, 2019", "Bruce Springsteen", "Long Branch, NJ", "Software Engineer", "Description"),
 ];
 
 function preventDefault(event: React.MouseEvent) {
@@ -79,6 +47,18 @@ function preventDefault(event: React.MouseEvent) {
 }
 
 export default function Jobs() {
+  // Function to handle the view action
+  const handleView = (id: number) => {
+    // Implement view functionality here
+    console.log("View item id:", id);
+  };
+
+  // Function to handle the delete action
+  const handleDelete = (id: number) => {
+    // Implement delete functionality here
+    console.log("Delete item id:", id);
+  };
+
   return (
     <React.Fragment>
       <Title>Declared positions</Title>
@@ -90,6 +70,8 @@ export default function Jobs() {
             <TableCell>Place</TableCell>
             <TableCell>Job Position</TableCell>
             <TableCell>Description</TableCell>
+            <TableCell>View</TableCell>
+            <TableCell>Delete</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -100,6 +82,16 @@ export default function Jobs() {
               <TableCell>{row.place}</TableCell>
               <TableCell>{row.jobPosition}</TableCell>
               <TableCell>{row.description}</TableCell>
+              <TableCell>
+                <IconButton onClick={() => handleView(row.id)} color="primary">
+                  <VisibilityIcon />
+                </IconButton>
+              </TableCell>
+              <TableCell>
+                <IconButton onClick={() => handleDelete(row.id)} color="secondary">
+                  <DeleteIcon />
+                </IconButton>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
