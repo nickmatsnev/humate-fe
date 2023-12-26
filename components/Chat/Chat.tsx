@@ -6,11 +6,13 @@ import {
   Typography,
   List,
   ListItem,
-  ListItemText,
   Divider,
   Fab,
+  Paper,
+  ListItemText,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import MicIcon from "@mui/icons-material/Mic";
 
 const ChatSection = styled("div")(({ theme }) => ({
   width: "100%",
@@ -26,6 +28,33 @@ const MessageArea = styled(List)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
+const MessageBubble = styled(Paper)(({ theme, align }) => ({
+  maxWidth: "75%",
+  padding: theme.spacing(1),
+  margin: theme.spacing(1),
+  backgroundColor:
+    align === "right"
+      ? theme.palette.primary.light
+      : theme.palette.background.paper,
+  borderRadius: "20px",
+  wordWrap: "break-word",
+  boxShadow: theme.shadows[1],
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  "& .MuiListItemText-primary": {
+    fontWeight: "bold",
+  },
+  "& .MuiListItemText-secondary": {
+    fontSize: "0.75rem",
+    paddingTop: "4px",
+  },
+}));
+
+const StyledListItemText = styled(ListItemText)(({ align }) => ({
+  textAlign: align,
+}));
+
 const Chat: React.FC = () => {
   return (
     <ChatSection>
@@ -33,52 +62,59 @@ const Chat: React.FC = () => {
         HR Bot
       </Typography>
       <MessageArea>
-        <ListItem key="1">
-          <Grid container>
-            <Grid item xs={12}>
-              <ListItemText align="right" primary="/start" />
-            </Grid>
-            <Grid item xs={12}>
-              <ListItemText align="right" secondary="09:30" />
-            </Grid>
-          </Grid>
+        <ListItem key="1" sx={{ justifyContent: "flex-end" }}>
+          <MessageBubble align="right">
+            <StyledListItemText
+              primary="/start"
+              secondary="09:30"
+              align="right"
+            />
+          </MessageBubble>
         </ListItem>
-        <ListItem key="2">
-          <Grid container>
-            <Grid item xs={12}>
-              <ListItemText align="left" primary="Hey, Nick! What is love ?" />
-            </Grid>
-            <Grid item xs={12}>
-              <ListItemText align="left" secondary="09:31" />
-            </Grid>
-          </Grid>
+        <ListItem key="2" sx={{ justifyContent: "flex-start" }}>
+          <MessageBubble align="left">
+            <StyledListItemText
+              primary="Hey, Nick! What is love ?"
+              secondary="09:31"
+              align="left"
+            />
+          </MessageBubble>
         </ListItem>
-        <ListItem key="3">
-          <Grid container>
-            <Grid item xs={12}>
-              <ListItemText
-                align="right"
-                primary="Baby don't hurt me, don't hurt me no more!"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <ListItemText align="right" secondary="10:30" />
-            </Grid>
-          </Grid>
+        <ListItem key="3" sx={{ justifyContent: "flex-end" }}>
+          <MessageBubble align="right">
+            <StyledListItemText
+              primary="Baby don't hurt me, don't hurt me no more!"
+              secondary="10:30"
+              align="right"
+            />
+          </MessageBubble>
         </ListItem>
       </MessageArea>
       <Divider />
       <Grid container style={{ padding: "20px" }} alignItems="center">
-        <Grid item xs={11}>
+        <Grid item xs={10}>
           <TextField
             id="outlined-basic-email"
             label="Type Something"
             fullWidth
           />
         </Grid>
-        <Grid item xs={1}>
+        <Grid
+          item
+          xs={1}
+          style={{ display: "flex", justifyContent: "flex-end" }}
+        >
           <Fab color="primary" aria-label="send">
             <SendIcon />
+          </Fab>
+        </Grid>
+        <Grid
+          item
+          xs={1}
+          style={{ display: "flex", justifyContent: "flex-end" }}
+        >
+          <Fab color="primary" aria-label="record">
+            <MicIcon />
           </Fab>
         </Grid>
       </Grid>

@@ -33,6 +33,7 @@ Tests to be added. CI/CD to be added.
 - Husky
 
 ## User Guide
+
 PC:
 ![Alt text](public/images/mainFrame.png)
 
@@ -50,5 +51,3 @@ Mobile:
 ![image](https://github.com/nickmatsnev/humate-fe/assets/36966491/dd24178d-ea75-407e-8f44-9865d519a340)
 
 ![image](https://github.com/nickmatsnev/humate-fe/assets/36966491/638ebfa8-fe88-4f0f-acec-4cbe64747995)
-
-
